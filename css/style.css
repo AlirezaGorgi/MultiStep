@@ -10,6 +10,7 @@
   font-family: "ub-r";
   src: url(../Fonts/fonts/Ubuntu-Regular.ttf) format("truetype");
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -17,142 +18,187 @@
 }
 
 body {
-  font-family: "ub-r";
+  font-family: "ub-r", sans-serif;
+  background-color: hsl(218, 100%, 97%);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: hsl(218, 100%, 97%);
 }
 
-.container {
-  background-color: #fff;
+/* Main Container */
+.main-container {
+  display: flex;
+  width: 900px;
+  height: 600px;
+  background-color: white;
   border-radius: 15px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 1200px;
 }
 
-.StepsPerson {
-  background-color: hsl(243, 100%, 62%);
-  background-image: url("../assets/bg-sidebar-desktop.svg");
+/* Steps Sidebar */
+.steps-sidebar {
+  width: 274px;
+  background-image: url("../images/bg-sidebar-desktop.svg");
+
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 30%; /* تصویر 30٪ از عرض کانتینر باشد */
-  background-position: top right;
-  color: #fff;
-  border-radius: 10px;
-  padding: 2rem 1.5rem;
-  transition: background-size 0.3s ease;
+  padding: 40px 32px;
+  position: relative;
+}
+
+.steps-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .step-item {
-  color: #fff;
-}
-
-.step-item .step-icon {
-  width: 40px;
-  height: 40px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  font-weight: bold;
-  transition: 0.3s;
+  gap: 15px;
+  color: white;
 }
 
-/* دایره فعال */
-.step-item.active .step-icon {
+.step-number {
+  width: 33px;
+  height: 33px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "ub-m", sans-serif;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.step-item.active .step-number {
   background-color: hsl(206, 94%, 87%);
-  color: hsl(243, 100%, 62%);
+  color: hsl(213, 96%, 18%);
   border-color: hsl(206, 94%, 87%);
 }
 
-/* متن مراحل */
-.step-item h6 {
+.step-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-counter {
+  font-size: 12px;
   color: hsl(231, 11%, 63%);
-  font-size: 0.8rem;
-  margin-bottom: 2px;
-  text-transform: uppercase;
+  font-family: "ub-r", sans-serif;
+  margin-bottom: 4px;
 }
 
-.step-item p {
-  color: #fff;
-  font-weight: bold;
-  font-size: 0.9rem;
+.step-title {
+  font-size: 14px;
+  font-family: "ub-B", sans-serif;
+  color: white;
+  letter-spacing: 1px;
 }
 
-/* ---------- Right Side (Form) ---------- */
-.info-plan {
-  margin-bottom: 2rem;
+/* Form Section */
+.form-section {
+  flex: 1;
+  padding: 40px 100px 40px 80px;
+  display: flex;
+  align-items: center;
 }
 
-h2,
-.text-information {
+.form-content {
+  width: 100%;
+  max-width: 450px;
+}
+
+.form-title {
+  font-family: "ub-B", sans-serif;
+  font-size: 32px;
   color: hsl(213, 96%, 18%);
-  font-weight: bold;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 12px;
 }
 
-.text-details {
+.form-description {
+  font-family: "ub-r", sans-serif;
+  font-size: 16px;
   color: hsl(231, 11%, 63%);
-  font-size: 0.95rem;
+  margin-bottom: 35px;
+  line-height: 1.5;
 }
 
-/* ---------- Inputs ---------- */
+/* Form Styles */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.label-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
 .form-label {
-  font-weight: 500;
+  font-family: "ub-m", sans-serif;
+  font-size: 14px;
   color: hsl(213, 96%, 18%);
+}
+
+.error-message {
+  font-family: "ub-B", sans-serif;
+  font-size: 12px;
+  color: hsl(354, 84%, 57%);
 }
 
 .form-control {
-  border: 1px solid hsl(231, 11%, 90%);
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px;
+  border: 1px solid hsl(231, 11%, 63%);
   border-radius: 8px;
-  padding: 10px;
-  transition: border 0.2s;
+  font-family: "ub-m", sans-serif;
+  font-size: 16px;
+  color: hsl(213, 96%, 18%);
+  transition: all 0.3s ease;
 }
 
 .form-control:focus {
+  outline: none;
   border-color: hsl(243, 100%, 62%);
-  box-shadow: 0 0 0 2px hsl(243, 100%, 87%);
 }
 
-/* ---------- Error Message ---------- */
-.errorMessage {
-  font-size: 0.8rem;
-  color: hsl(354, 84%, 57%);
-  float: right;
-  margin-top: -5px;
-  margin-bottom: 5px;
+.form-control::placeholder {
+  color: hsl(231, 11%, 63%);
+  font-family: "ub-m", sans-serif;
 }
 
-.d-none {
-  display: none !important;
+/* Button */
+.form-actions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-/* ---------- Button ---------- */
 .btn-primary {
   background-color: hsl(213, 96%, 18%);
+  color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 8px;
-  font-weight: 500;
+  font-family: "ub-m", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
   background-color: hsl(243, 100%, 62%);
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 768px) {
-  .StepsPerson {
-    border-radius: 0;
-    margin-bottom: 2rem;
-  }
-
-  .container {
-    padding: 1rem;
-  }
+/* Utility Classes */
+.d-none {
+  display: none !important;
 }
