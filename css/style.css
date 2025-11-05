@@ -1,46 +1,158 @@
-/* # Front-end Style Guide
+@font-face {
+  font-family: "ub-B";
+  src: url(../Fonts/fonts/Ubuntu-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "ub-m";
+  src: url(../Fonts/fonts/Ubuntu-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "ub-r";
+  src: url(../Fonts/fonts/Ubuntu-Regular.ttf) format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-## Layout
+body {
+  font-family: "ub-r";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(218, 100%, 97%);
+}
 
-The designs were created to the following widths:
+.container {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 1200px;
+}
 
-- Mobile: 375px
-- Desktop: 1440px
+.StepsPerson {
+  background-color: hsl(243, 100%, 62%);
+  background-image: url("../assets/bg-sidebar-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 30%; /* تصویر 30٪ از عرض کانتینر باشد */
+  background-position: top right;
+  color: #fff;
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  transition: background-size 0.3s ease;
+}
 
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+.step-item {
+  color: #fff;
+}
 
-## Colors
+.step-item .step-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
-### Primary
+/* دایره فعال */
+.step-item.active .step-icon {
+  background-color: hsl(206, 94%, 87%);
+  color: hsl(243, 100%, 62%);
+  border-color: hsl(206, 94%, 87%);
+}
 
-- Blue 950: hsl(213, 96%, 18%)
-- Purple 600: hsl(243, 100%, 62%)
-- Blue 300: hsl(228, 100%, 84%)
-- Blue 200: hsl(206, 94%, 87%)
-- Red 500: hsl(354, 84%, 57%)
+/* متن مراحل */
+.step-item h6 {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.8rem;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
 
-### Neutral
+.step-item p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
 
-- Grey 500: hsl(231, 11%, 63%)
-- Purple 200: hsl(229, 24%, 87%)
-- Blue 100: hsl(218, 100%, 97%)
-- Blue 50: hsl(231, 100%, 99%)
-- White: hsl(0, 100%, 100%)
+/* ---------- Right Side (Form) ---------- */
+.info-plan {
+  margin-bottom: 2rem;
+}
 
-## Typography
+h2,
+.text-information {
+  color: hsl(213, 96%, 18%);
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
 
-### Body Copy
+.text-details {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.95rem;
+}
 
-- Font size (paragraph): 16px
+/* ---------- Inputs ---------- */
+.form-label {
+  font-weight: 500;
+  color: hsl(213, 96%, 18%);
+}
 
-### Font
+.form-control {
+  border: 1px solid hsl(231, 11%, 90%);
+  border-radius: 8px;
+  padding: 10px;
+  transition: border 0.2s;
+}
 
-- Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu)
-- Weights: 400, 500, 700
+.form-control:focus {
+  border-color: hsl(243, 100%, 62%);
+  box-shadow: 0 0 0 2px hsl(243, 100%, 87%);
+}
 
-> 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma.
- */
+/* ---------- Error Message ---------- */
+.errorMessage {
+  font-size: 0.8rem;
+  color: hsl(354, 84%, 57%);
+  float: right;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
 
-:root {
-  background-color: hsl(77, 73%, 46%);
+.d-none {
+  display: none !important;
+}
+
+/* ---------- Button ---------- */
+.btn-primary {
+  background-color: hsl(213, 96%, 18%);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: hsl(243, 100%, 62%);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .StepsPerson {
+    border-radius: 0;
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
 }
