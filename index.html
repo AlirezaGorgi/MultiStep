@@ -121,34 +121,39 @@
             <div class="plan-card">
               <img src="./images/icon-arcade.svg" alt="" />
               <div class="plan-info">
-                <h4>Arcade</h4>
+                <h4 class="plan-info-value">Arcade</h4>
                 <p class="plan-info_price">$9/mo</p>
               </div>
             </div>
             <div class="plan-card">
               <img src="./images/icon-advanced.svg" alt="" />
               <div class="plan-info">
-                <h4>Advanced</h4>
+                <h4 class="plan-info-value">Advanced</h4>
                 <p class="plan-info_price">$12/mo</p>
               </div>
             </div>
             <div class="plan-card">
               <img src="./images/icon-pro.svg" alt="" />
               <div class="plan-info">
-                <h4>Pro</h4>
+                <h4 class="plan-info-value">Pro</h4>
                 <p class="plan-info_price">$15/mo</p>
               </div>
             </div>
           </div>
-          <div class="billing-toggle">
-            <span>Monthly</span>
-            <label class="switch">
+          <div class="billing-toggle-container">
+            <span class="billing-option active" data-billing="monthly"
+              >Monthly</span
+            >
+
+            <label class="billing-switch">
               <input type="checkbox" id="billing-toggle" />
-              <span class="slider"></span>
+              <span class="billing-slider"></span>
             </label>
-            <span>Yearly</span>
+
+            <span class="billing-option" data-billing="yearly">Yearly</span>
           </div>
-          <div class="form-action">
+
+          <div class="form-action button-select">
             <button type="button" class="btn btn-back">Go back</button>
             <button type="button" class="btn btn-next">Next Step</button>
           </div>

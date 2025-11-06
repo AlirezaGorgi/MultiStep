@@ -206,3 +206,129 @@ body {
 }
 
 /* Step 2 styles */
+.plan-option {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.plan-card {
+  border: 1px solid hsl(231, 11%, 63%);
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plan-card.selected {
+  border-color: hsl(243, 100%, 62%);
+  background-color: hsl(231, 100%, 94%);
+}
+.plan-card:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+
+.plan-info {
+  margin-top: 2rem;
+}
+.plan-info-value {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.plan-info_price {
+  font-size: 15px;
+  color: hsl(240, 0%, 41%);
+}
+
+.billing-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem;
+  border-radius: 15px;
+  background-color: hsl(231, 100%, 94%);
+}
+
+.billing-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.billing-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.billing-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.billing-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .billing-slider {
+  background-color: hsl(213, 96%, 18%);
+}
+
+input:checked + .billing-slider:before {
+  transform: translateX(24px);
+}
+
+.billing-option {
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+.billing-option.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.button-select {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn-back {
+  transition: all 350ms ease-in;
+  border: none;
+}
+.btn-back:hover {
+  color: hsl(213, 96%, 18%);
+  font-weight: bold;
+}
+.btn-next {
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9px;
+}
+.btn-next:hover {
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+}
