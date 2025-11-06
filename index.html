@@ -111,7 +111,7 @@
           </form>
         </div>
       </div>
-      <div id="step2" class="form-section step">
+      <div id="step2" class="form-section step d-none">
         <div class="form-content">
           <h2 class="form-title">Select Your Plan</h2>
           <p class="form-description">
@@ -122,21 +122,21 @@
               <img src="./images/icon-arcade.svg" alt="" />
               <div class="plan-info">
                 <h4 class="plan-info-value">Arcade</h4>
-                <p class="plan-info_price">$9/mo</p>
+                <p class="plan-info-desc">$9/mo</p>
               </div>
             </div>
             <div class="plan-card">
               <img src="./images/icon-advanced.svg" alt="" />
               <div class="plan-info">
                 <h4 class="plan-info-value">Advanced</h4>
-                <p class="plan-info_price">$12/mo</p>
+                <p class="plan-info-desc">$12/mo</p>
               </div>
             </div>
             <div class="plan-card">
               <img src="./images/icon-pro.svg" alt="" />
               <div class="plan-info">
                 <h4 class="plan-info-value">Pro</h4>
-                <p class="plan-info_price">$15/mo</p>
+                <p class="plan-info-desc">$15/mo</p>
               </div>
             </div>
           </div>
@@ -155,6 +155,76 @@
 
           <div class="form-action button-select">
             <button type="button" class="btn btn-back">Go back</button>
+            <button type="button" class="btn btn-next">Next Step</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="step3" class="form-section step">
+        <div class="form-content">
+          <h2 class="form-title">Pick add-ons</h2>
+          <p class="form-description">
+            Add-ons help enhance your gaming experience.
+          </p>
+
+          <div class="add-ons-container">
+            <!-- Add-on 1 -->
+            <div class="add-on-item">
+              <input
+                type="checkbox"
+                id="online-service"
+                class="add-on-checkbox"
+              />
+              <label for="online-service" class="add-on-label">
+                <div class="add-on-info">
+                  <h4 class="add-on-title">Online service</h4>
+                  <p class="add-on-description">Access to multiplayer games</p>
+                </div>
+                <div class="add-on-price">
+                  <span class="price-text">+$1/mo</span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Add-on 2 -->
+            <div class="add-on-item">
+              <input
+                type="checkbox"
+                id="larger-storage"
+                class="add-on-checkbox"
+              />
+              <label for="larger-storage" class="add-on-label">
+                <div class="add-on-info">
+                  <h4 class="add-on-title">Larger storage</h4>
+                  <p class="add-on-description">Extra 1TB of cloud save</p>
+                </div>
+                <div class="add-on-price">
+                  <span class="price-text">+$2/mo</span>
+                </div>
+              </label>
+            </div>
+
+            <!-- Add-on 3 -->
+            <div class="add-on-item">
+              <input
+                type="checkbox"
+                id="customizable-profile"
+                class="add-on-checkbox"
+              />
+              <label for="customizable-profile" class="add-on-label">
+                <div class="add-on-info">
+                  <h4 class="add-on-title">Customizable Profile</h4>
+                  <p class="add-on-description">Custom theme on your profile</p>
+                </div>
+                <div class="add-on-price">
+                  <span class="price-text">+$2/mo</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-back">Go Back</button>
             <button type="button" class="btn btn-next">Next Step</button>
           </div>
         </div>
