@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: "ub-r", sans-serif;
+  font-family: "ub-r";
   background-color: hsl(218, 100%, 97%);
   min-height: 100vh;
   display: flex;
@@ -29,9 +29,10 @@ body {
 /* Main Container */
 .main-container {
   display: flex;
-  width: 900px;
+  width: 950px;
   height: 600px;
   background-color: white;
+  padding: 1rem;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -41,7 +42,7 @@ body {
 .steps-sidebar {
   width: 274px;
   background-image: url("../images/bg-sidebar-desktop.svg");
-
+  border-radius: 15px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,6 +61,7 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-left: -30px;
   color: white;
 }
 
@@ -202,3 +204,5 @@ body {
 .d-none {
   display: none !important;
 }
+
+/* Step 2 styles */

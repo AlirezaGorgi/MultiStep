@@ -55,7 +55,7 @@
       </div>
 
       <!-- Right side (Form Section) -->
-      <div class="form-section">
+      <div id="step1" class="form-section step d-none">
         <div class="form-content">
           <h2 class="form-title">Personal info</h2>
           <p class="form-description">
@@ -111,8 +111,50 @@
           </form>
         </div>
       </div>
+      <div id="step2" class="form-section step">
+        <div class="form-content">
+          <h2 class="form-title">Select Your Plan</h2>
+          <p class="form-description">
+            You have the option of monthly or yearly billing
+          </p>
+          <div class="plan-option">
+            <div class="plan-card">
+              <img src="./images/icon-arcade.svg" alt="" />
+              <div class="plan-info">
+                <h4>Arcade</h4>
+                <p class="plan-info_price">$9/mo</p>
+              </div>
+            </div>
+            <div class="plan-card">
+              <img src="./images/icon-advanced.svg" alt="" />
+              <div class="plan-info">
+                <h4>Advanced</h4>
+                <p class="plan-info_price">$12/mo</p>
+              </div>
+            </div>
+            <div class="plan-card">
+              <img src="./images/icon-pro.svg" alt="" />
+              <div class="plan-info">
+                <h4>Pro</h4>
+                <p class="plan-info_price">$15/mo</p>
+              </div>
+            </div>
+          </div>
+          <div class="billing-toggle">
+            <span>Monthly</span>
+            <label class="switch">
+              <input type="checkbox" id="billing-toggle" />
+              <span class="slider"></span>
+            </label>
+            <span>Yearly</span>
+          </div>
+          <div class="form-action">
+            <button type="button" class="btn btn-back">Go back</button>
+            <button type="button" class="btn btn-next">Next Step</button>
+          </div>
+        </div>
+      </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
