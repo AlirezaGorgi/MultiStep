@@ -561,3 +561,251 @@ input:checked + .billing-slider:before {
   text-align: right;
 }
 /* finiish confirm-last */
+
+/* responsive */
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  body {
+    background-color: hsl(217, 100%, 97%);
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .main-container {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+  }
+
+  /* Mobile Steps Sidebar */
+  .steps-sidebar {
+    width: 100%;
+    height: 172px;
+    background-image: url("../images/bg-sidebar-mobile.svg");
+    border-radius: 0;
+    padding: 32px 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .steps-list {
+    flex-direction: row;
+    gap: 16px;
+    margin: 0 2rem 4rem 0;
+  }
+
+  .step-item {
+    margin-left: 0;
+  }
+
+  .step-info {
+    display: none;
+  }
+
+  /* Mobile Form Section */
+  .form-section {
+    padding: 32px 24px;
+    margin-top: -80px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-left: 24px;
+    margin-right: 24px;
+    width: calc(100% - 48px);
+    z-index: 1;
+  }
+
+  .form-content {
+    max-width: 100%;
+  }
+
+  .form-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .form-description {
+    font-size: 16px;
+    margin-bottom: 22px;
+    line-height: 1.6;
+  }
+
+  /* Mobile Form Groups */
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-control {
+    height: 40px;
+    font-size: 15px;
+  }
+
+  /* Mobile Plan Options */
+  .plan-option {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 1.5rem 0;
+  }
+
+  .plan-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .plan-info {
+    margin-top: 0;
+  }
+
+  .plan-info-value {
+    font-size: 14px;
+  }
+
+  .plan-info-desc {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  /* Mobile Billing Toggle */
+  .billing-toggle-container {
+    margin-top: 24px;
+    gap: 24px;
+  }
+
+  /* Mobile Add-ons */
+  .add-ons-container {
+    margin: 1.5rem 0;
+  }
+
+  .add-on-label {
+    padding: 12px 16px;
+  }
+
+  .add-on-title {
+    font-size: 14px;
+  }
+
+  .add-on-description {
+    font-size: 12px;
+  }
+
+  .add-on-price {
+    font-size: 13px;
+  }
+
+  /* Mobile Summary */
+  .summary-container {
+    padding: 16px;
+    margin: 1.5rem 0 1rem 0;
+  }
+
+  .selected-plan-name {
+    font-size: 14px;
+  }
+
+  .plan-price-main {
+    font-size: 14px;
+  }
+
+  .addon-name,
+  .addon-price {
+    font-size: 14px;
+  }
+
+  .total-price {
+    font-size: 16px;
+  }
+
+  /* Mobile Form Actions */
+  .form-actions,
+  .form-action.button-select {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 16px;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-action-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 16px;
+    margin-top: 0;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-next,
+  .btn-confirm {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  .btn-right {
+    position: relative;
+    left: 17rem;
+  }
+  /* Mobile Confirmation */
+  .confirm-data {
+    padding: 80px 24px;
+    text-align: center;
+  }
+
+  .confirm-desc {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 375px) {
+  .form-section {
+    margin-left: 16px;
+    margin-right: 16px;
+    width: calc(100% - 32px);
+    padding: 24px 16px;
+  }
+
+  .form-title {
+    font-size: 22px;
+  }
+
+  .form-description {
+    font-size: 15px;
+  }
+  .btn-right {
+    position: relative;
+    left: 14rem;
+  }
+}
+
+/* Tablet Adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-container {
+    width: 90%;
+    height: auto;
+    min-height: 600px;
+  }
+
+  .form-section {
+    padding: 40px 60px 40px 40px;
+  }
+}

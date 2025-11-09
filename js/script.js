@@ -37,23 +37,18 @@ function validateStep(stepId) {
   const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
   const phoneRe = /^\+?[\d\s\-()]{7,20}$/;
 
-  // گرفتن همه input های required داخل این step
   const inputs = step.querySelectorAll("input[required]");
 
   inputs.forEach((input) => {
-    // پیدا کردن المان پیام خطا مرتبط (مطابق ساختار HTML شما)
     const formGroup = input.closest(".form-group");
     const errorMsgEl = formGroup
       ? formGroup.querySelector(".error-message")
       : null;
 
-    // مقدار ورودی
     const value = input.value.trim();
 
-    // مقدار پیش‌فرض پیام
     let message = "This field is required";
 
-    // چک‌های اختصاصی بر اساس id یا type
     if (value === "") {
       message = "This field is required";
       isValid = false;
@@ -62,7 +57,6 @@ function validateStep(stepId) {
         message = "Please enter a valid email address";
         isValid = false;
       } else {
-        // ok
         message = "";
       }
     } else if (input.type === "tel" || input.id === "phone") {
@@ -73,11 +67,9 @@ function validateStep(stepId) {
         message = "";
       }
     } else {
-      // سایر inputها فقط چک خالی بودن
       message = "";
     }
 
-    // نمایش یا مخفی کردن پیام خطا
     if (errorMsgEl) {
       if (message) {
         errorMsgEl.textContent = message;
@@ -155,6 +147,25 @@ function showTemporaryMessage(msg) {
   }, 3000);
 }
 
+function updatePlanBonus() {
+  planCards.forEach((card) => {
+    const desc = card.querySelector(".plan-info-desc");
+    const oldBonus = card.querySelector(".plan-bonus");
+
+    if (oldBonus) oldBonus.remove();
+
+    if (selectedBilling === "yearly") {
+      desc.insertAdjacentHTML(
+        "afterend",
+        `<p class="plan-bonus">2 months free</p>`
+      );
+
+      const bonus = card.querySelector(".plan-bonus");
+      setTimeout(() => bonus.classList.add("show"), 10);
+    }
+  });
+}
+
 steps.forEach((step) => {
   if (step.id === "step1") {
     step.classList.remove("d-none");
@@ -230,6 +241,7 @@ toggle.addEventListener("change", () => {
     );
   });
   updateAddOnsPricesAndSelection();
+  updatePlanBonus();
   planCards.forEach((card) => {
     const planName = card
       .querySelector(".plan-info-value")
