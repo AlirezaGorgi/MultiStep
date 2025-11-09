@@ -20,7 +20,7 @@
       <!-- Left side (Steps) -->
       <div class="steps-sidebar">
         <ul class="steps-list">
-          <li class="step-item active">
+          <li class="step-item active" data-step="step1">
             <span class="step-number">1</span>
             <div class="step-info">
               <span class="step-counter">STEP 1</span>
@@ -28,7 +28,7 @@
             </div>
           </li>
 
-          <li class="step-item">
+          <li class="step-item" data-step="step2">
             <span class="step-number">2</span>
             <div class="step-info">
               <span class="step-counter">STEP 2</span>
@@ -36,7 +36,7 @@
             </div>
           </li>
 
-          <li class="step-item">
+          <li class="step-item" data-step="step3">
             <span class="step-number">3</span>
             <div class="step-info">
               <span class="step-counter">STEP 3</span>
@@ -44,7 +44,7 @@
             </div>
           </li>
 
-          <li class="step-item">
+          <li class="step-item" data-step="step4">
             <span class="step-number">4</span>
             <div class="step-info">
               <span class="step-counter">STEP 4</span>
@@ -106,7 +106,7 @@
             </div>
 
             <div class="form-actions-btn">
-              <button type="submit" class="btn btn-primary">Next Step</button>
+              <button type="submit" class="btn btn-next">Next Step</button>
             </div>
           </form>
         </div>
@@ -274,11 +274,13 @@
 
           <div class="form-actions">
             <button type="button" class="btn btn-back">Go Back</button>
-            <button type="button" class="btn btn-confirm">Confirm</button>
+            <button type="button" class="btn btn-confirm btn-next">
+              Confirm
+            </button>
           </div>
         </div>
       </div>
-      <div class="confirm-data form-section" id="confirming">
+      <div class="confirm-data form-section d-none" id="confirming">
         <div class="confirm-info">
           <img src="./images/icon-thank-you.svg" alt="thank-you" />
           <h3 class="confirm-title">Thank you!</h3>
