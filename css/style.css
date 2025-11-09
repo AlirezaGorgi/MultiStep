@@ -178,6 +178,10 @@ body {
 }
 
 /* Button */
+.form-action-btn {
+  display: flex;
+  justify-content: end;
+}
 .form-actions {
   margin-top: 40px;
   display: flex;
@@ -426,6 +430,134 @@ input:checked + .billing-slider:before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 /* finish step 3 */
+
+/* ======================= */
+/* start step 4 */
+.summary-container {
+  background-color: hsl(231, 100%, 99%);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0 1rem 0;
+}
+.plan-summary {
+  margin-bottom: 1rem;
+}
+.plan-main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.plan-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.selected-plan-name {
+  font-family: "ub-B", sans-serif;
+  color: hsl(213, 96%, 18%);
+  margin: 0;
+  font-size: 1rem;
+}
+.change-plan-link {
+  font-family: "ub-r", sans-serif;
+  color: hsl(231, 11%, 63%);
+  text-decoration: underline;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+.change-plan-link:hover {
+  color: hsl(243, 100%, 62%);
+}
+
+.plan-price-main {
+  font-family: "ub-B", sans-serif;
+  color: hsl(213, 96%, 18%);
+  font-size: 1rem;
+}
+.divider {
+  height: 1px;
+  background-color: hsl(229, 24%, 87%);
+  margin: 1rem 0;
+}
+.addons-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.addon-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addon-name {
+  font-family: "ub-r", sans-serif;
+  color: hsl(231, 11%, 63%);
+  font-size: 0.9rem;
+}
+.addon-price {
+  font-family: "ub-r", sans-serif;
+  color: hsl(213, 96%, 18%);
+  font-size: 0.9rem;
+}
+.total-container {
+  padding: 0 1.5rem;
+}
+.total-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+.total-label {
+  font-family: "ub-r", sans-serif;
+  color: hsl(231, 11%, 63%);
+  font-size: 0.9rem;
+}
+.total-price {
+  font-family: "ub-B", sans-serif;
+  color: hsl(243, 100%, 62%);
+  font-size: 1.2rem;
+}
+.btn-confirm {
+  background-color: hsl(243, 100%, 62%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-family: "ub-m", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-confirm:hover {
+  background-color: hsl(243, 100%, 77%);
+}
+/* finish step 4 */
+
+/* start confirm-last */
+.confirm-data {
+  display: flex;
+  align-items: center;
+}
+.confirm-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.confirm-title {
+  color: hsl(213, 96%, 18%);
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.confirm-desc {
+  font-size: 1rem;
+  color: #9699ab;
+  line-height: 1.6;
+  max-width: 450px;
+  text-align: right;
+}
+/* finiish confirm-last */
