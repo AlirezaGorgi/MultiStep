@@ -455,6 +455,18 @@ input:checked + .billing-slider:before {
   flex-direction: column;
   gap: 0.25rem;
 }
+.plan-bonus {
+  color: #473dff;
+  font-size: 14px;
+  margin-top: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.plan-bonus.show {
+  opacity: 1;
+}
+
 .selected-plan-name {
   font-family: "ub-B", sans-serif;
   color: hsl(213, 96%, 18%);
