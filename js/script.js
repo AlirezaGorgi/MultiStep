@@ -265,7 +265,8 @@ planCards.forEach((card) => {
       .querySelector(".plan-info-value")
       .textContent.toLowerCase();
     const newPrice = planPrices[planName][selectedBilling];
-
+    card.querySelector(".plan-info-desc").textContent =
+      "$" + newPrice + "/" + (selectedBilling === "monthly" ? "mo" : "yr");
     selectedPlan.name = planName;
     selectedPlan.billing = selectedBilling;
     selectedPlan.price = newPrice;
